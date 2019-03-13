@@ -18,7 +18,7 @@ public class ApiKeyHandlerMethodArgumentResolver implements HandlerMethodArgumen
         String value = webRequest.getHeader("Api-Key");
 
         if(value == null){
-            throw new IllegalArgumentException("Unauthorized");
+            throw new ApiKeyException("No API Key");
         } else {
             return new ApiKey(value);
         }

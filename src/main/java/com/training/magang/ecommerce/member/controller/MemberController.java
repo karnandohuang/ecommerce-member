@@ -20,7 +20,7 @@ public class MemberController {
             method = RequestMethod.POST,
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Member create(@RequestBody Member member){
+    public Member create(@RequestBody Member member, ApiKey apiKey){
         return memberService.create(member);
     }
 
@@ -47,7 +47,7 @@ public class MemberController {
             method = RequestMethod.PUT,
             consumes = MediaType.APPLICATION_JSON_VALUE
     )
-    public Member update(@RequestBody Member member){
+    public Member update(@RequestBody Member member, ApiKey apiKey){
         return memberService.update(member);
     }
 
@@ -56,7 +56,7 @@ public class MemberController {
             method = RequestMethod.DELETE,
             consumes = MediaType.APPLICATION_JSON_VALUE
     )
-    public Member delete(@PathVariable("id") Long id){
+    public Member delete(@PathVariable("id") Long id, ApiKey apiKey){
 
         return memberService.delete(id);
     }
