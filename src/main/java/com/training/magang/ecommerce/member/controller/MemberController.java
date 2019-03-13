@@ -5,7 +5,6 @@ import com.training.magang.ecommerce.member.model.Member;
 import com.training.magang.ecommerce.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
