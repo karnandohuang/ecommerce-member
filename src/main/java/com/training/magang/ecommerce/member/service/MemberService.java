@@ -13,10 +13,10 @@ public interface MemberService {
 //    Product delete(int id);
 
     Member create(Member member);
-    Member findById(int id);
+    Member findById(Long id);
     List<Member> findAll();
     Member update(Member member);
-    Member delete(int id);
+    Member delete(Long id);
 
 
 }
